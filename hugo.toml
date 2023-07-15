@@ -101,7 +101,7 @@ url = "https://example.com"
     enable = true
     title = "Here are a few technologies I've been working with recently:"
     mainitem = "https://www.vectorlogo.zone/logos/docker/docker-official.svg"
-    items = ["https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg","https://www.vectorlogo.zone/logos/python/python-ar21.svg","https://www.vectorlogo.zone/logos/plot_ly/plot_ly-ar21.svg","https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg","https://www.vectorlogo.zone/logos/grpcio/grpcio-ar21.svg",""]
+    items = ["https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg","https://www.vectorlogo.zone/logos/python/python-ar21.svg","https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg","https://www.vectorlogo.zone/logos/grpcio/grpcio-ar21.svg","https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg","https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg","https://www.vectorlogo.zone/logos/neo4j/neo4j-ar21.svg","https://www.vectorlogo.zone/logos/plot_ly/plot_ly-ar21.svg","https://www.vectorlogo.zone/logos/gitlab/gitlab-ar21.svg","https://www.vectorlogo.zone/logos/github/github-ar21.svg"]
 
 
   [params.experience]
