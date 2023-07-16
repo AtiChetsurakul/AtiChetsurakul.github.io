@@ -29,7 +29,7 @@ unsafe = true
 [params]
 title = "Ati Page"
 description = "Text about my cool site"
-favicon = "/images/faceimg.png"
+favicon = "/images/fav.png"
 useBootstrapCDN = false
 animate = true
 
@@ -62,7 +62,7 @@ animate = true
 
 Img source: coolvector Freepik
             """
-  image = "/images/faceimg.png"
+  image = "/images/fav.png"
 
     [params.hero.bottomImage]
     enable = true
