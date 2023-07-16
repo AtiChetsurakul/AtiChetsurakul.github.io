@@ -62,7 +62,7 @@ animate = true
 
 Img source: coolvector Freepik
             """
-  image = "/images/fav.png"
+  image = "/images/faceimg2.png"
 
     [params.hero.bottomImage]
     enable = true
