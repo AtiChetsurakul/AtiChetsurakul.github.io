@@ -54,10 +54,14 @@ animate = true
 
   [params.hero]
   enable = true
+  intro = 'สวัสดีครับ Everyone'
   #intro = "Hi, my name is"
-  title = "Ati Tesakulsiri."
-  subtitle = "I am DSAI master's student"
-  content = "I am an undergraduate student at AIT with a DSAI major."
+  title = "I am Ati Tesakulsiri."
+  subtitle = "DSAI master's student"
+  content = """I am an undergraduate student at AIT with a DSAI major.
+
+Img source: coolvector Freepik
+            """
   image = "/images/faceimg.png"
 
     [params.hero.bottomImage]
@@ -85,7 +89,7 @@ url = "https://example.com"
   [params.about]
   enable = true
   title = "About Me"
-  image = "/images/faceimg.png"
+  image = "/images/faceimg2.png"
   content = """
 
   I am an undergraduate student at AIT with a DSAI major. I am interested in Deep learning and
@@ -128,37 +132,48 @@ url = "https://example.com"
   enable = true
   index = false
 
-
+# 1st School
     [[params.education.items]]
     title = "Master of Science in Data Science and Artificial Intelligence "
     date = "2022 - present"
     GPA = "3.67 / 4.0"
     content = """
-    After I finish the computer science bootcamp, I join this major
-    since I love computer science, and It is quite related to my previuos degree.
-"""
-
+After I finish the computer science bootcamp, 
+I join this major degree to become a developer who bring 
+AI to any device using API or microservices. 
+    """
       [params.education.items.school]
       name = "Asian Institute of Technology"
       url = "https://ait.ac.th/"
 
+# 2nd School
 
     [[params.education.items]]
     title = "Bachelor of Science in Chemistry"
     date = "2017 - 2021"
     GPA = "3.6 / 4.0"
     content = """
-To add
-"""
+At first, I join the university as non-major in science which aim to take the **mathematic major**.
+Although I love mathematic, I still get excited when it a time for chemistry lab.
+I join the chemistry major in thrid semester and focus in **Analytical chemistry**.
+
+I have a project which got funded from **YSTP, NSTDA**
+- In the topic of ` Micro-Solid Phase Extraction and Electrochemical Detection for Serotonin Monitoring`
+  - This project invole in the extraction Serotonin from human urine for monitoring with cheap price and highly accurate.
+
+With Analytical chemistry, I have specialize in linear algebra and looking forward for application.
+In the end, I saw that this can be applied in to **deep learning** so I shift my interest into computer science
+
+              """
 
       [params.education.items.school]
       name = "Suranaree University of Technology"
       url = "http://www.sut.ac.th/"
 
-      [params.education.items.featuredLink]
-      enable = true
-      name = "My academic record"
-      url = "https://example.com"
+      #[params.education.items.featuredLink]
+      #enable = true
+      #name = "My academic record"
+      #url = "https://example.com"
 
 
   [params.achievements]
@@ -174,54 +189,53 @@ To add
   enable = true
 
     [[params.projects.items]]
-    title = "Hugo Profile"
-    content = "A highly customizable and mobile first Hugo template for personal portfolio and blog."
-    image = "/images/projects/profile.png"
-    badges = [ "Hugo", "Bootstrap", "Javascript" ]
-
+    title = "Serotonin Extraction"
+    content = "Micro-Solid Phase Extraction and Electrochemical Detection for Serotonin Monitoring"
+    image = "/images/projects/pipetteSero.png"
+    badges = [ "SLP", "HPLC", "Chemistry" ]
       [params.projects.items.featured]
       name = "Demo"
-      link = "https://hugo-profile.netlify.app"
+      link = "https://drive.google.com/file/d/13QOegKGa2QXYjpA4xXpY2xOexwyF_7Yy/view?usp=sharing"
 
       [[params.projects.items.links]]
       icon = "fa fa-envelope"
       url = "mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f"
 
       [[params.projects.items.links]]
-      icon = "fab fa-github"
-      url = "https://github.com/gurusabarish/hugo-profile"
+      icon = "fas fa-certificate"
+      url = "images/pic.png"
 
-      [[params.projects.items.links]]
-      icon = "fab fa-twitter"
-      url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
+      #[[params.projects.items.links]]
+      #icon = "fab fa-twitter"
+      #url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
 
     [[params.projects.items]]
-    title = "Image Converter"
-    content = "A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django."
-    image = "/images/projects/converter.jpg"
-    badges = [ "Django", "Bootstrap" ]
+    title = "TO ADD"
+    content = "TO ADD"
+    image = "/images/projects/pic.png"
+    badges = [ "TOADD","TOADD" ]
 
       [params.projects.items.featured]
       name = "Demo"
-      link = "https://django-converter.herokuapp.com"
+      link = ""
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
-      url = "https://github.com/gurusabarish/converter"
-
+      url = ""
+      
     [[params.projects.items]]
-    title = "Hugo Profile V2"
-    content = "A clean and simple Hugo template for personal portfolio and blog."
-    image = "/images/projects/profile2.jpg"
-    badges = [ "Hugo", "Bootstrap", "Javascript" ]
+    title = "TO ADD"
+    content = "TO ADD"
+    image = "/images/projects/pic.png"
+    badges = [ "TOADD","TOADD" ]
 
       [params.projects.items.featured]
-      name = "Demo V2"
-      link = "https://hugo-profile-2.netlify.app"
+      name = "Demo"
+      link = ""
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
-      url = "https://github.com/gurusabarish/HugoProfileV2"
+      url = ""
 
   [params.contact]
   enable = true

@@ -7,3 +7,6 @@
 [submodule "themes/hugoProfileReforge"]
 	path = themes/hugoProfileReforge
 	url = https://github.com/AtiChetsurakul/hugoProfileReforge.git
+[submodule "themes.hugoProfileReforge"]
+	path = themes.hugoProfileReforge
+	url = https://github.com/AtiChetsurakul/hugoProfileReforge.git
