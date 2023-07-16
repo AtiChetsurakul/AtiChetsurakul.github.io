@@ -80,7 +80,7 @@ url = "https://github.com/AtiChetsurakul"
 
 [[params.hero.socialLinks.fontAwesomeIcons]]
 icon = "fab fa-linkedin"
-url = "https://example.com"
+url = "https://www.linkedin.com/in/ati-tesakulsiri-1a8409263"
 
 #[[params.hero.socialLinks.customIcons]]
 #icon = "/fav.png"
@@ -176,23 +176,84 @@ In the end, I saw that this can be applied in to **deep learning** so I shift my
       #url = "https://example.com"
 
 
+
+# To change to certificate
+
   [params.achievements]
   enable = true
 
     [[params.achievements.items]]
-    title = "CS50 varients"
+    title = "CS50"
     content = "I solved all problems with optimal solution."
-    url = "https://example.com"
+    url = "https://certificates.cs50.io/3754a2b9-0e35-440f-928b-9ff6959c5992.pdf?size=letter"
 
+    [[params.achievements.items]]
+    title = "CS50AI"
+    content = "I solved all problems with optimal solution."
+    url = "https://certificates.cs50.io/dab00252-47f3-417e-a438-5988f85d8ee1.pdf?size=letter"
+
+    [[params.achievements.items]]
+    title = "YSTP scholarship"
+    content = "Chemistry project"
+    url = "images/certs/YSTP.png"
+
+# Project
 
   [params.projects]
   enable = true
 
     [[params.projects.items]]
+    title = "NLP application"
+    content = "build a Flask web application which serving various Deep learning NLP model for tasks"
+    image = "/images/projects/nlpapp3.png"
+    badges = [ "NLP","pytorch","Hugging Face" ]
+
+      [params.projects.items.featured]
+      name = "Demo"
+      link = "https://github.com/AtiChetsurakul/NLP_AppPresentation"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/AtiChetsurakul/NLP_AppPresentation"
+
+
+  # PROJECT 2
+    [[params.projects.items]]
+    title = "Bros of Rainbow"
+    content = "Using RAINBOW, a varient of Deep Q-learning, to train an agent for super mario playing"
+    image = "/images/projects/rainbros2.gif"
+    badges = [ "reinforcement learning","pytorch","gym" ]
+
+      [params.projects.items.featured]
+      name = "Read"
+      link = "https://github.com/AtiChetsurakul/BrosOfRainbow/blob/main/Mario_Rainbow__DRL_.pdf"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/AtiChetsurakul/BrosOfRainbow"
+
+# PROJECT 3
+    [[params.projects.items]]
+    title = "Computer Vision project"
+    content = "Currently private."
+    image = "/images/projects/pic.png"
+    badges = [ ]
+
+      [params.projects.items.featured]
+      name = "--"
+      link = ""
+
+      #[[params.projects.items.links]]
+      #icon = "fab fa-github"
+      #url = ""
+
+
+
+    [[params.projects.items]]
     title = "Serotonin Extraction"
-    content = "Micro-Solid Phase Extraction and Electrochemical Detection for Serotonin Monitoring"
-    image = "/images/projects/pipetteSero.png"
-    badges = [ "SLP", "HPLC", "Chemistry" ]
+    content = "Micro-Solid Phase Extraction and Electrochemical Detection for Serotonin Monitoring. Funded by YSTP, NSTDA"
+    image = "/images/projects/serotonin.png"
+    badges = [ "SPE", "HPLC", "Chemistry" ]
       [params.projects.items.featured]
       name = "Demo"
       link = "https://drive.google.com/file/d/13QOegKGa2QXYjpA4xXpY2xOexwyF_7Yy/view?usp=sharing"
@@ -203,31 +264,15 @@ In the end, I saw that this can be applied in to **deep learning** so I shift my
 
       [[params.projects.items.links]]
       icon = "fas fa-certificate"
-      url = "images/pic.png"
+      url = "images/certs/YSTP.png"
 
-      #[[params.projects.items.links]]
-      #icon = "fab fa-twitter"
-      #url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
 
+# PROJECT 2
     [[params.projects.items]]
-    title = "TO ADD"
-    content = "TO ADD"
-    image = "/images/projects/pic.png"
-    badges = [ "TOADD","TOADD" ]
-
-      [params.projects.items.featured]
-      name = "Demo"
-      link = ""
-
-      [[params.projects.items.links]]
-      icon = "fab fa-github"
-      url = ""
-      
-    [[params.projects.items]]
-    title = "TO ADD"
-    content = "TO ADD"
-    image = "/images/projects/pic.png"
-    badges = [ "TOADD","TOADD" ]
+    title = "Chemlab Copilot"
+    content = "A Basic IOS application built to send an API requests to fetch chemical data."
+    image = "/images/projects/chemlabReal.png"
+    badges = [ "Swift","Story board","Xcode" ]
 
       [params.projects.items.featured]
       name = "Demo"
@@ -237,16 +282,82 @@ In the end, I saw that this can be applied in to **deep learning** so I shift my
       icon = "fab fa-github"
       url = ""
 
+  # PROJECT 3
+    [[params.projects.items]]
+    title = "Diabete classification using Raman spectrums"
+    content = "Using scikit learn and classic ML tool to classify the patient."
+    image = "/images/projects/ramanR.png"
+    badges = [ "Python","sklearn" ]
+
+      [params.projects.items.featured]
+      name = "PP"
+      link = "https://github.com/AtiChetsurakul/DataScienceAndMLProjects/blob/main/Diabete_detection_withRamanSpec/CP%20presentation%20.pdf"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/AtiChetsurakul/DataScienceAndMLProjects/blob/main/Diabete_detection_withRamanSpec"
+
+
+  # PROJECT 7
+    [[params.projects.items]]
+    title = "Joules of Saim"
+    content = "A web application intregrated with interactive dasboard for electricities prediction"
+    image = "/images/projects/jouleofs.png"
+    badges = [ "Flask","Dash" ]
+
+      [params.projects.items.featured]
+      name = "Demo"
+      link = "http://st123009.pythonanywhere.com/"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/TonsonP/Joules_of_Siam"
+
+  # PROJECT 8
+    [[params.projects.items]]
+    title = "Secret NLP project"
+    content = "To be anouce"
+    image = "/images/projects/pic.png"
+    badges = [ "--","--" ]
+
+      [params.projects.items.featured]
+      name = "--"
+      link = ""
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = ""
+
+  # PROJECT 9
+    [[params.projects.items]]
+    title = "Secret CV project"
+    content = "TO be anouce"
+    image = "/images/projects/pic.png"
+    badges = [ "--","--" ]
+
+      [params.projects.items.featured]
+      name = "--"
+      link = ""
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = ""
+
+
+# Contact
   [params.contact]
   enable = true
   content = "If you interest, please contact me."
   email = "ksde34@gmail.com"
-  btnName = "Mail me"
+  btnName = "email"
+
+
+# About this site
 
 
 [params.footer.socialNetworks]
-github = "https://github.com"
-linkedin = "https://linkedin.com"
+github = "https://github.com/AtiChetsurakul"
+linkedin = "https://www.linkedin.com/in/ati-tesakulsiri-1a8409263"
 
 
   [params.listPages]
