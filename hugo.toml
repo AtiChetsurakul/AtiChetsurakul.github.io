@@ -60,7 +60,7 @@ animate = true
   subtitle = "DSAI master's student"
   content = """I am an undergraduate student at AIT with a DSAI major.
             """
-  image = "/images/ati.jpeg"
+  image = "/images/IMG_7449.JPG"
 
     [params.hero.bottomImage]
     enable = true
@@ -87,7 +87,7 @@ url = "https://www.linkedin.com/in/ati-tesakulsiri-1a8409263"
   [params.about]
   enable = true
   title = "About Me"
-  image = "/images/ati.jpeg"
+  image = "/images/IMG_7449.JPG"
   content = """
 
   I am an undergraduate student at AIT with a DSAI major. I am interested in Deep learning and
