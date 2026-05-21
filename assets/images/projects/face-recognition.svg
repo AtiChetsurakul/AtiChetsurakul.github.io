@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Face recognition infographic">
+  <rect width="960" height="600" fill="#f3f5f4"/>
+  <rect x="250" y="92" width="460" height="416" rx="42" fill="#dcebea"/>
+  <path d="M360 310c0-96 54-160 120-160s120 64 120 160c0 104-54 154-120 154s-120-50-120-154z" fill="#15616d"/>
+  <circle cx="436" cy="292" r="14" fill="#fff"/>
+  <circle cx="524" cy="292" r="14" fill="#fff"/>
+  <path d="M432 374c32 24 65 24 96 0" stroke="#fff" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M206 180v-70h70M754 110h70v70M276 490h-70v-70M824 420v70h-70" stroke="#9a5b22" stroke-width="18" stroke-linecap="round"/>
+  <path d="M128 300h150M682 300h150" stroke="#15616d" stroke-width="18" stroke-linecap="round"/>
+</svg>

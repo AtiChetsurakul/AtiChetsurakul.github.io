@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Road safety AI infographic">
+  <rect width="960" height="600" fill="#edf4f2"/>
+  <path d="M405 600 480 84l75 516z" fill="#263638"/>
+  <path d="M478 120v480" stroke="#e7c27f" stroke-width="12" stroke-dasharray="30 28"/>
+  <rect x="166" y="286" width="158" height="84" rx="22" fill="#15616d"/>
+  <circle cx="210" cy="383" r="22" fill="#1d2528"/>
+  <circle cx="282" cy="383" r="22" fill="#1d2528"/>
+  <path d="M640 210h138l38 58v74H610v-90c0-23 14-42 30-42z" fill="#9a5b22"/>
+  <circle cx="660" cy="356" r="24" fill="#1d2528"/>
+  <circle cx="772" cy="356" r="24" fill="#1d2528"/>
+  <path d="M540 120h94l-47 82z" fill="#d85d4a"/>
+  <circle cx="480" cy="86" r="46" fill="#fff" stroke="#15616d" stroke-width="12"/>
+  <path d="m480 62 28 48h-56z" fill="#15616d"/>
+</svg>

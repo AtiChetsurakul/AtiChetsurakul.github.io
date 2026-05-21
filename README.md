@@ -1,7 +1,18 @@
-# Plain page from HTML 5 UP
+# Ati Tesakulsiri Portfolio
 
-- use for showing self information i.e. education, experiences and contact
+Static GitHub Pages portfolio and resume hub.
 
-### Plan
+## Local Preview
 
-- Looking for time to upgrade the site
+```bash
+python3 -m http.server 8000
+```
+
+Open `http://localhost:8000/`.
+
+## Structure
+
+- `index.html` - bilingual portfolio site
+- `assets/` - CSS, JS, profile image, project infographics
+- `downloads/` - printable resume HTML variants and Markdown resume sources
+

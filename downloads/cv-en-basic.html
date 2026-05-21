@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ati Tesakulsiri - Basic Resume</title>
+    <style>
+      :root {
+        --ink: #111;
+        --muted: #333;
+        --line: #111;
+        --link: #0645ad;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #ececec;
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: 1.36;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+      }
+
+      .sheet {
+        background: #fff;
+        margin: 24px auto;
+        min-height: 297mm;
+        padding: 13mm 15mm;
+        width: 210mm;
+      }
+
+      .topline {
+        display: grid;
+        gap: 8mm;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        margin: 0 0 2mm;
+      }
+
+      .topline p {
+        margin: 0 0 1mm;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 2mm;
+      }
+
+      h2 {
+        font-size: 1.16rem;
+        margin: 4mm 0 1.5mm;
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin: 2.5mm 0 1mm;
+      }
+
+      .rule {
+        border-top: 1px solid var(--line);
+        font-size: 0;
+        height: 0;
+        margin: 3mm 0 2.5mm;
+      }
+
+      .rule::before {
+        content: "--------------------------------------------------------------------------------";
+        display: block;
+        font-size: 1rem;
+        line-height: 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 10mm;
+      }
+
+      .meta strong {
+        flex: 1;
+      }
+
+      .meta span {
+        flex: 0 0 auto;
+        text-align: right;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        break-inside: avoid;
+        margin: 0 0 1.2mm;
+        padding-left: 3.2mm;
+        position: relative;
+      }
+
+      li::before {
+        content: "-";
+        left: 0;
+        position: absolute;
+      }
+
+      .skills li {
+        margin-bottom: 0.8mm;
+      }
+
+      .project-title {
+        font-weight: 700;
+      }
+
+      .project-title::after {
+        content: ": ";
+      }
+
+      .compact {
+        margin-bottom: 1.6mm;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        html,
+        body {
+          background: #fff;
+        }
+
+        .sheet {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+
+      @media screen and (max-width: 840px) {
+        .sheet {
+          margin: 0;
+          min-height: auto;
+          padding: 24px;
+          width: 100%;
+        }
+
+        .topline,
+        .meta {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <h1>Ati Tesakulsiri</h1>
+      <p><strong>Machine Learning Developer | AI Center Unit, Asian Institute of Technology</strong></p>
+      <div class="rule"></div>
+
+      <section class="topline">
+        <div>
+          <p><strong>Address:</strong> Nonthaburi, Thailand</p>
+          <p><strong>Nationality:</strong> Thai</p>
+          <p><strong>Email:</strong> <a href="mailto:tesakulsiriati@gmail.com">tesakulsiriati@gmail.com</a></p>
+        </div>
+        <div>
+          <p><strong>Phone:</strong> 095 787 5141 / (+66) 95 787 5141</p>
+          <p><strong>Site:</strong> <a href="https://atichetsurakul.github.io/">https://atichetsurakul.github.io/</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ati-tesakulsiri-1a8409263/">https://www.linkedin.com/in/ati-tesakulsiri-1a8409263/</a></p>
+        </div>
+      </section>
+
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li><strong>Language:</strong> Python</li>
+        <li><strong>Tools / Frameworks:</strong> Claude Code, Codex, PyTorch, Ultralytics, Hugging Face, Triton Inference Server, Docker, GitLab CI/CD</li>
+        <li><strong>Theory:</strong> Machine Learning, Deep Learning, Image and Video Processing, Signal Processing, Natural Language Processing, Data Science</li>
+        <li><strong>Environment / Operating System:</strong> Ubuntu</li>
+      </ul>
+
+      <div class="rule"></div>
+      <h2>Working Experience</h2>
+      <div class="meta">
+        <strong>Asian Institute of Technology, Pathumthani, Thailand</strong>
+        <span>June 2023 - Present</span>
+      </div>
+      <p class="compact"><strong>AI Center Unit</strong></p>
+      <ul>
+        <li><strong>Machine Learning Developer</strong> - Full time, current position</li>
+        <li><strong>Software Developer</strong> - Full time, after graduation</li>
+        <li><strong>Graduate Research Assistant</strong> - Internship</li>
+      </ul>
+
+      <div class="rule"></div>
+      <h2>Selected Work Projects</h2>
+      <ul>
+        <li><span class="project-title">Text-Based Video Smart Search</span>Developing a PoC system using generative AI for Thai-language surveillance-record search. Leveraged LangChain, SmolAgent, and Ollama for on-premise LLM serving; developed vision-language multimodal systems, fine-tuned models, and vector database integration for video analytics programs.</li>
+        <li><span class="project-title">CCTV Black Smoke Measurement and Evaluation</span>Developed research software to detect and analyze black smoke from vehicles in collaboration with ENTEC, NSTDA. Built a web application with video analytics for smoke screening and multi-frame emissions analysis from light-duty diesel trucks and vans.</li>
+        <li><span class="project-title">Safety AI PoC</span>Developing a tollway surveillance PoC for wrong-way driving, speeding, illegal parking, and unexpected object detection. Responsible for a zoom-assisted API for falling-object detection up to 300 meters and vehicle length classification.</li>
+        <li><span class="project-title">AI Service for Video Analytics</span>Contributed to AI service tasks, AI training, optimization, hosting tests, CI pipeline upgrades, automated unit and evaluation tests, reporting, and service software patching.</li>
+        <li><span class="project-title">Face Recognition</span>Owned the analytics-side face recognition system, including detection, tracking, recognition integration, evaluation, and deployment support.</li>
+        <li><span class="project-title">Wildfire Simulation and Component Classification</span>Developed wildfire component classification and segmentation from drone video, with forecasting support using empirical models and satellite data.</li>
+        <li><span class="project-title">Video Action Recognition</span>Improved action recognition post-processing to reduce fall detection false positives and performed system performance evaluation.</li>
+        <li><span class="project-title">Other Demo Projects</span>Developed accident detection demo logic using tracked object-pair information and Qwen 3.5 for reasoning over vehicle interactions. Built VLM-based scene detection for fire, violence, fall, smoke, and abnormal surveillance events.</li>
+      </ul>
+
+      <div class="rule"></div>
+      <h2>University and Personal Projects</h2>
+      <ul>
+        <li><span class="project-title">Joules of Saim</span>Designed and built an end-to-end business intelligence project to forecast electricity prices. Responsible for data pipeline work including data gathering from BOT and EGAT APIs, time-series model training, and deployment of an interactive Python-based web dashboard.</li>
+        <li><span class="project-title">Diabetes Classification Using Raman Spectrums</span>Applied traditional machine learning such as SVM and ANN with signal processing techniques to classify diabetes from Raman spectrums.</li>
+        <li><span class="project-title">Bros of Rainbow</span>Conducted a comparative analysis of reinforcement learning architectures including Rainbow, DDQN, LSTM, and Transformer variants for OpenAI Gym game-playing agents.</li>
+        <li><span class="project-title">NLP Application</span>Developed and hosted a web application showcasing NLP models, including a resume parser using NER, sequence-to-sequence machine translation, and text generation.</li>
+        <li><span class="project-title">Serotonin Extraction and Quantitative Analysis</span>Studied substance absorption with a monolith material approach for urine extraction to perform quantitative analysis of serotonin concentration related to depression.</li>
+      </ul>
+
+      <div class="rule"></div>
+      <h2>Thesis</h2>
+      <p><strong>MULTI-MODAL PERSON RETRIEVAL: BRIDGING TEXT, IMAGES, AND RE-IDENTIFICATION</strong></p>
+      <p>Developing a Transformer-based multimodal system integrating a text encoder and an image encoder for person-related tasks, including identity information processing, cross-camera person re-identification, and text-based person search in one model, following the OpenAI CLIP design.</p>
+
+      <div class="rule"></div>
+      <h2>Education</h2>
+      <div class="meta">
+        <strong>Asian Institute of Technology, Thailand</strong>
+        <span>Graduated May 2024</span>
+      </div>
+      <p class="compact">Master of Science in Data Science and Artificial Intelligence, GPA 3.7/4.0. Recipient of the Hisamatsu Prize.</p>
+      <p>Courses taken: Recent Trends in Machine Learning, Data Modeling and Management, Machine Learning, Business Intelligence and Analytics, Computer Programming for Data Science and Artificial Intelligence, Natural Language Understanding.</p>
+
+      <div class="meta">
+        <strong>Suranaree University of Technology, Thailand</strong>
+        <span>Graduated January 2021</span>
+      </div>
+      <p>Bachelor of Science, GPA 3.60/4.0. YSTP research scholar from NSTDA and full scholarship recipient from the university.</p>
+
+      <div class="rule"></div>
+      <h2>Scholarships and Awards</h2>
+      <ul>
+        <li><strong>Hisamatsu Prize:</strong> Ranked #1 in batch academic record, granted by Asian Institute of Technology.</li>
+        <li><strong>Young Scientist and Technologist Program:</strong> Granted by National Science and Technology Development Agency.</li>
+        <li><strong>Royal Thai Government Fellowships:</strong> 100% scholarship granted by Asian Institute of Technology.</li>
+        <li><strong>Talented Individuals in Science and Technology Scholarship:</strong> Full scholarship for bachelor's degree, granted by Suranaree University of Technology.</li>
+      </ul>
+
+      <div class="rule"></div>
+      <h2>Certifications</h2>
+      <ul>
+        <li><strong>CS50x:</strong> Core programming and web application concepts with C, Python, and SQLite before master's degree study. Certificate link.</li>
+        <li><strong>CS50AI:</strong> Core concepts of artificial intelligence and machine learning for master's degree study. Certificate link.</li>
+      </ul>
+    </main>
+  </body>
+</html>

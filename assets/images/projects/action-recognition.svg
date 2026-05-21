@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Video action recognition infographic">
+  <rect width="960" height="600" fill="#edf4f2"/>
+  <rect x="96" y="116" width="768" height="368" rx="28" fill="#17383d"/>
+  <rect x="132" y="154" width="188" height="292" rx="16" fill="#d9efef"/>
+  <rect x="386" y="154" width="188" height="292" rx="16" fill="#d9efef"/>
+  <rect x="640" y="154" width="188" height="292" rx="16" fill="#d9efef"/>
+  <circle cx="226" cy="238" r="30" fill="#15616d"/>
+  <path d="M226 270v82l-50 54M226 352l54 54M196 306h60" stroke="#15616d" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="480" cy="248" r="30" fill="#9a5b22"/>
+  <path d="M480 280v62l-70 42M480 342l80 26M448 310h76" stroke="#9a5b22" stroke-width="16" stroke-linecap="round"/>
+  <path d="M690 362h106" stroke="#d85d4a" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="710" cy="310" r="30" fill="#d85d4a"/>
+  <path d="M710 342v36M734 362l48 36" stroke="#d85d4a" stroke-width="16" stroke-linecap="round"/>
+</svg>

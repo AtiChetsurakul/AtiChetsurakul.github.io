@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Black smoke detection infographic">
+  <rect width="960" height="600" fill="#f2f4f1"/>
+  <path d="M176 360h360l64 72h78c28 0 50 22 50 50H136c0-67 40-122 40-122z" fill="#154852"/>
+  <circle cx="260" cy="485" r="48" fill="#1b2528"/>
+  <circle cx="604" cy="485" r="48" fill="#1b2528"/>
+  <path d="M710 180c-40-70 44-96 10-150 86 24 126 90 91 156 74 4 112 75 72 139-39 62-139 62-190 17-47-42-26-109 17-162z" fill="#6c7779"/>
+  <path d="M185 290c96-34 196-34 300 0" fill="none" stroke="#e4ad63" stroke-width="20" stroke-linecap="round"/>
+  <rect x="110" y="126" width="234" height="126" rx="18" fill="#fff" stroke="#d8e2e0" stroke-width="8"/>
+  <path d="M144 210h166M144 170h96" stroke="#15616d" stroke-width="14" stroke-linecap="round"/>
+</svg>

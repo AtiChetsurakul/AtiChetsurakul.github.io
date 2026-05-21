@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Wildfire analysis infographic">
+  <rect width="960" height="600" fill="#f1f5f2"/>
+  <path d="M0 438c150-78 260-76 390-22 138 58 282 36 570-76v260H0z" fill="#d6e6dd"/>
+  <path d="M340 460c56-80 4-120 88-206 0 78 78 92 78 190 0 65-45 108-96 108-44 0-82-32-70-92z" fill="#d85d4a"/>
+  <path d="M416 494c34-46 8-72 54-122 4 46 50 58 50 112 0 38-28 64-61 64-26 0-50-20-43-54z" fill="#e4ad63"/>
+  <path d="M170 148h136M238 80v136M654 104h136M722 36v136" stroke="#15616d" stroke-width="16" stroke-linecap="round"/>
+  <path d="M228 382 324 250h62M604 334l106-96h88" stroke="#203235" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <circle cx="228" cy="382" r="18" fill="#15616d"/>
+  <circle cx="604" cy="334" r="18" fill="#15616d"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="AI service pipeline infographic">
+  <rect width="960" height="600" fill="#eef3f3"/>
+  <rect x="112" y="132" width="172" height="112" rx="18" fill="#15616d"/>
+  <rect x="394" y="132" width="172" height="112" rx="18" fill="#9a5b22"/>
+  <rect x="676" y="132" width="172" height="112" rx="18" fill="#15616d"/>
+  <rect x="252" y="366" width="456" height="104" rx="22" fill="#203235"/>
+  <path d="M284 188h104M566 188h104M480 244v116" stroke="#203235" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="198" cy="188" r="32" fill="#e8f5f4"/>
+  <path d="m183 188 16 16 28-34" stroke="#15616d" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M440 188h80M432 410h96M560 410h70M330 410h70" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="762" cy="188" r="30" fill="#e4ad63"/>
+</svg>
