@@ -64,6 +64,17 @@ img {
   top: 16px;
 }
 
+.sr-only {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .site-header {
   backdrop-filter: blur(18px);
   background: color-mix(in srgb, var(--bg) 86%, transparent);
@@ -178,6 +189,112 @@ h1 {
 .button.secondary {
   background: transparent;
   color: var(--accent);
+}
+
+.markdown-action {
+  display: inline-flex;
+  position: relative;
+}
+
+.markdown-copy,
+.markdown-menu summary {
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 800;
+  min-height: 42px;
+}
+
+.markdown-copy {
+  border-radius: 7px 0 0 7px;
+  gap: 8px;
+  padding: 9px 12px;
+}
+
+.markdown-copy:hover,
+.markdown-copy:focus-visible,
+.markdown-menu summary:hover,
+.markdown-menu summary:focus-visible,
+.markdown-menu[open] summary {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.markdown-copy.is-copied {
+  color: var(--accent);
+}
+
+.markdown-copy.is-error {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.markdown-copy svg,
+.markdown-menu summary svg {
+  fill: none;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 18px;
+}
+
+.markdown-menu {
+  position: relative;
+}
+
+.markdown-menu summary {
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+  justify-content: center;
+  list-style: none;
+  padding: 9px 10px;
+}
+
+.markdown-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.markdown-menu-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  min-width: 230px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 10;
+}
+
+.markdown-menu-panel a {
+  border-radius: 6px;
+  display: block;
+  padding: 9px 10px;
+  text-decoration: none;
+}
+
+.markdown-menu-panel a:hover,
+.markdown-menu-panel a:focus-visible {
+  background: var(--panel-strong);
+}
+
+.markdown-menu-panel strong,
+.markdown-menu-panel span {
+  display: block;
+}
+
+.markdown-menu-panel span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+  margin-top: 2px;
 }
 
 .profile-card {
@@ -416,6 +533,11 @@ h2 {
   .nav-links a,
   .control {
     font-size: 0.84rem;
+  }
+
+  .markdown-menu-panel {
+    left: 0;
+    right: auto;
   }
 }
 

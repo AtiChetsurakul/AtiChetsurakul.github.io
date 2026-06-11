@@ -5,6 +5,7 @@
   const langBlocks = document.querySelectorAll("[data-lang-content]");
   const sectionLinks = document.querySelectorAll("[data-scroll-section]");
   const languageLabels = document.querySelectorAll("[data-label-en][data-label-th]");
+  const markdownActions = document.querySelectorAll("[data-markdown-source]");
   const year = document.querySelector("[data-current-year]");
 
   const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -61,6 +62,92 @@
       setTheme(root.dataset.theme === "dark" ? "light" : "dark");
     });
   }
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    const copied = document.execCommand("copy");
+    textarea.remove();
+    if (!copied) {
+      throw new Error("Clipboard copy failed");
+    }
+  }
+
+  markdownActions.forEach((action) => {
+    const button = action.querySelector("[data-copy-markdown]");
+    const label = action.querySelector("[data-copy-label]");
+    const status = action.querySelector("[data-copy-status]");
+    const menu = action.querySelector(".markdown-menu");
+    const defaultLabel = label.textContent;
+    let resetTimer;
+
+    button.addEventListener("click", async () => {
+      window.clearTimeout(resetTimer);
+      button.disabled = true;
+      button.classList.remove("is-copied", "is-error");
+
+      try {
+        const response = await fetch(action.dataset.markdownSource);
+        if (!response.ok) {
+          throw new Error(`Could not load Markdown (${response.status})`);
+        }
+        await copyText(await response.text());
+        const isThai = root.lang === "th";
+        label.textContent = isThai ? "คัดลอกแล้ว" : "Copied";
+        status.textContent = isThai
+          ? "คัดลอก Markdown ไปยังคลิปบอร์ดแล้ว"
+          : "Markdown copied to clipboard";
+        button.classList.add("is-copied");
+      } catch (error) {
+        const isThai = root.lang === "th";
+        label.textContent = isThai ? "คัดลอกไม่สำเร็จ" : "Copy failed";
+        status.textContent = isThai
+          ? "ไม่สามารถคัดลอก Markdown ได้"
+          : "Could not copy Markdown";
+        button.classList.add("is-error");
+        console.error(error);
+      } finally {
+        button.disabled = false;
+        resetTimer = window.setTimeout(() => {
+          label.textContent = defaultLabel;
+          button.classList.remove("is-copied", "is-error");
+        }, 2200);
+      }
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.open = false;
+      });
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".markdown-menu[open]").forEach((menu) => {
+      if (!menu.contains(event.target)) {
+        menu.open = false;
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".markdown-menu[open]").forEach((menu) => {
+        menu.open = false;
+        menu.querySelector("summary").focus();
+      });
+    }
+  });
 
   if (year) {
     year.textContent = new Date().getFullYear();
