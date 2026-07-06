@@ -453,6 +453,25 @@ h2 {
   padding: 20px;
 }
 
+.certification-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  max-width: 460px;
+}
+
+.certification-badge {
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  padding: 14px;
+}
+
 .download-grid {
   display: grid;
   gap: 12px;
@@ -505,6 +524,7 @@ h2 {
 @media (max-width: 900px) {
   .hero,
   .grid,
+  .certification-grid,
   .download-grid,
   .contact-list {
     grid-template-columns: 1fr;
