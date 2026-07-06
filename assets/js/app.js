@@ -6,11 +6,25 @@
   const sectionLinks = document.querySelectorAll("[data-scroll-section]");
   const languageLabels = document.querySelectorAll("[data-label-en][data-label-th]");
   const markdownActions = document.querySelectorAll("[data-markdown-source]");
+  const profileRevealButtons = document.querySelectorAll("[data-profile-reveal]");
   const year = document.querySelector("[data-current-year]");
 
   const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   const savedTheme = localStorage.getItem("theme") || preferredTheme;
   const savedLang = localStorage.getItem("lang") || "en";
+
+  function updateMarkdownSources(lang) {
+    markdownActions.forEach((action) => {
+      const source = lang === "th" ? action.dataset.markdownSourceTh : action.dataset.markdownSourceEn;
+      if (!source) {
+        return;
+      }
+      action.dataset.markdownSource = source;
+      action.querySelectorAll("[data-markdown-view], [data-markdown-download]").forEach((link) => {
+        link.href = source;
+      });
+    });
+  }
 
   function setTheme(theme) {
     root.dataset.theme = theme;
@@ -37,6 +51,7 @@
     languageLabels.forEach((node) => {
       node.textContent = lang === "th" ? node.dataset.labelTh : node.dataset.labelEn;
     });
+    updateMarkdownSources(lang);
     localStorage.setItem("lang", lang);
     setTheme(root.dataset.theme || savedTheme);
   }
@@ -88,7 +103,6 @@
     const label = action.querySelector("[data-copy-label]");
     const status = action.querySelector("[data-copy-status]");
     const menu = action.querySelector(".markdown-menu");
-    const defaultLabel = label.textContent;
     let resetTimer;
 
     button.addEventListener("click", async () => {
@@ -119,16 +133,31 @@
       } finally {
         button.disabled = false;
         resetTimer = window.setTimeout(() => {
-          label.textContent = defaultLabel;
+          label.textContent = root.lang === "th"
+            ? (label.dataset.labelTh || "คัดลอก Markdown")
+            : (label.dataset.labelEn || "Copy Markdown");
           button.classList.remove("is-copied", "is-error");
         }, 2200);
       }
     });
 
-    menu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.open = false;
+    if (menu) {
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.open = false;
+        });
       });
+    }
+  });
+
+  profileRevealButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".profile-card");
+      if (card) {
+        card.classList.add("is-profile-revealed");
+        button.setAttribute("aria-pressed", "true");
+        button.blur();
+      }
     });
   });
 

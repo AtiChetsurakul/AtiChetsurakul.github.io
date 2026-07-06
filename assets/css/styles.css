@@ -107,6 +107,10 @@ img {
   gap: 12px;
 }
 
+.nav-markdown {
+  flex: 0 0 auto;
+}
+
 .nav-links a,
 .control {
   border: 1px solid var(--line);
@@ -307,11 +311,54 @@ h1 {
   padding: 14px;
 }
 
+.profile-image-wrap {
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
 .profile-card img {
   border-radius: 7px;
   aspect-ratio: 633 / 916;
+  filter: blur(14px);
   object-fit: cover;
+  transform: scale(1.04);
+  transition: filter 180ms ease, transform 180ms ease;
   width: 100%;
+}
+
+.profile-card.is-profile-revealed img {
+  filter: none;
+  transform: none;
+}
+
+.profile-reveal {
+  align-items: center;
+  background: color-mix(in srgb, var(--panel) 78%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border-radius: 7px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-weight: 850;
+  inset: 12px;
+  justify-content: center;
+  padding: 12px;
+  position: absolute;
+  text-align: center;
+  transition: opacity 160ms ease;
+}
+
+.profile-reveal:hover,
+.profile-reveal:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.profile-card.is-profile-revealed .profile-reveal {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .theme-profile-dark {
@@ -457,19 +504,58 @@ h2 {
   align-items: stretch;
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, minmax(180px, 1fr));
-  max-width: 460px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.certification-badge {
+.certification-badge,
+.certification-card {
   align-items: center;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   display: flex;
-  justify-content: center;
   min-height: 300px;
   padding: 14px;
+}
+
+.certification-badge {
+  justify-content: center;
+}
+
+.certification-card {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.certification-card:hover,
+.certification-card:focus-visible {
+  border-color: var(--accent);
+}
+
+.certification-card span {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.certification-card h3 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.certification-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.certification-card strong {
+  color: var(--accent);
+  font-size: 0.9rem;
 }
 
 .download-grid {
@@ -544,6 +630,14 @@ h2 {
   .nav {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .nav-markdown {
+    width: 100%;
+  }
+
+  .nav-markdown .markdown-copy {
+    flex: 1;
   }
 
   .nav-links {

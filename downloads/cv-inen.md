@@ -82,9 +82,10 @@ Talented individuals in science and technology Scholarship: Granted by Suranaree
 Certifications
 
 
-CS50X 						 Certificate link
+CS50X 						 [Certificate](https://certificates.cs50.io/3754a2b9-0e35-440f-928b-9ff6959c5992.pdf?size=letter)
 Core programming, and web application concept with c, python and sqlite study before Master degree study.
-CS50AI					              Certificate link
+CS50AI					              [Certificate](https://certificates.cs50.io/dab00252-47f3-417e-a438-5988f85d8ee1.pdf?size=letter)
 Core concept of fundamental Artificial Intelligent and Machine Learning for Master degree study.
-
+PM Credly Badge				          [Badge](https://www.credly.com/badges/9b8fa800-9750-4112-a1b1-28ba5f8a7105)
+Verified PM credential hosted on Credly.
 
